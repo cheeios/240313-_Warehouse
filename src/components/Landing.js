@@ -1,26 +1,30 @@
 import { ArrowsPointingOutIcon, ClockIcon, BuildingOfficeIcon } from '@heroicons/react/20/solid';
+import ImageModal from './ImageModal';
 import WarehouseImage from '../assets/M_Ignacio_Warehouse_Landing.jpg';
+import React, { useState } from 'react';
 
 const features = [
-  {
-    name: 'Excellent Public Transport Links',
-    description:
-      "Just a short journey away from LRT-1 Balintawak Station and EDSA Busway's Kaingin Bus Stop, our location offers unbeatable convenience for commuting.",
-    icon: ArrowsPointingOutIcon,
-  },
   {
     name: 'Direct Skyway Stage 3 Access',
     description: 'Right at Skyway Stage 3 entrance, our warehouse gives quick access to Quezon Ave. and Balintawak, making city travel easy.',
     icon: ClockIcon,
   },
   {
-    name: 'Prime Metro Location',
-    description: "M. Ignacio Warehouse is in the heart of the Metro, close to business areas in Caloocan, Valenzuela, and Manila - perfect for business operations.",
+    name: 'High Ceiling Storage Facility',
+    description: 'Featuring a high-ceiling design, our warehouse is perfect for large-scale storage, accommodating oversized containers and inventory with ease.',
+    icon: ArrowsPointingOutIcon,
+  },
+  {
+    name: 'Flexible Leasing Options',
+    description: 'Offering both short-term and long-term leases, our centrally located warehouse caters to varied business needs in Metro Manila.',
     icon: BuildingOfficeIcon,
   },
 ]
 
 export default function Landing() {
+
+  const [ isModalOpen, setModalOpen ] = useState(false);
+
   return (
     <div className="overflow-hidden bg-white py-12 sm:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -51,6 +55,15 @@ export default function Landing() {
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
             width={2432}
             height={1442}
+            onClick={() => setModalOpen(true)}
+          />
+          <ImageModal 
+            isOpen={isModalOpen} 
+            onClose={() => setModalOpen(false)} 
+            imgSrc={WarehouseImage}
+            width={2432}
+            height={1442}
+            alt="M Igancio Warehouse Building No 5"
           />
         </div>
       </div>
