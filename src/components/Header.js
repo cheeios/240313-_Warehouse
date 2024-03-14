@@ -1,12 +1,9 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
+  BuildingOfficeIcon,
+  TruckIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
@@ -14,11 +11,11 @@ import WarehouseImage from '../assets/M_Ignacio_Warehouse_Icon.png';
 import { Link } from 'react-router-dom';
 
 const products = [
-  { name: 'Warehouse 1', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Warehouse 2', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Warehouse 3', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Facility 1', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Facility 2', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Warehouse 1', description: 'A Vacant Warehouse with 400 sqm', href: '/warehouse-1', icon: TruckIcon },
+  { name: 'Warehouse 2', description: 'A Vacant Warehouse with 800 sqm', href: '#', icon: TruckIcon },
+  { name: 'Warehouse 3', description: 'A Vacant Warehouse with 1600 sqm', href: '#', icon: TruckIcon },
+  // { name: 'Facility 1', description: 'Connect with third-party tools', href: '#', icon: BuildingOfficeIcon },
+  // { name: 'Facility 2', description: 'Build strategic funnels that will convert', href: '#', icon: BuildingOfficeIcon },
 ]
 
 function classNames(...classes) {
@@ -81,10 +78,12 @@ export default function Header() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
+                        <Link to={'/' + item.href}>
+                          <a href={item.href} className="block font-semibold text-gray-900">
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
