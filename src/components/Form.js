@@ -32,9 +32,9 @@ export default function Example() {
                 <div className="text-gray-600">Warehouse Manager</div>
               </div>
               <div className="mt-8 flex items-center justify-center space-x-3 text-base">
-                <div className="text-rose-400 font-bold">+63955-347-3435</div>
+                <div className="text-rose-400 font-bold">+63-955-347-3435</div>
                 <div className="text-black-400 font-bold">|</div>
-                <div className="text-indigo-400 font-bold">+63932-728-8811</div> 
+                <div className="text-indigo-400 font-bold">+63-932-728-8811</div> 
               </div>
             </figcaption>
           </figure>
