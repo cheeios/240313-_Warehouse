@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import ImageModal from './ImageModal';
-import WarehouseOneImageOne from '../assets/Warehouse1_Image_One.jpg';
-import WarehouseOneImageTwo from '../assets/Warehouse1_Image_Two.jpg';
-import WarehouseOneImageThree from '../assets/Warehouse1_Image_Three.jpg';
+import WarehouseOneImageOne from '../assets/Warehouse3_Image_One.jpg';
+import WarehouseOneImageTwo from '../assets/Warehouse3_Image_Two.jpg';
+import WarehouseOneImageThree from '../assets/Warehouse3_Image_Three.jpg';
 
 const callouts = [
   {
-    name: 'Building 1 Gate',
-    description: 'A Large Gates Entrance',
+    name: 'Inside Building 3',
+    description: 'A Warehouse Equipped with High Ceiling',
     imageSrc: WarehouseOneImageOne,
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
   },
   {
-    name: 'Building 1 Lobby',
-    description: 'High Ceiling for Large Storage',
+    name: 'Building 3 Gate',
+    description: 'Entrace for Building 3',
     imageSrc: WarehouseOneImageTwo,
     imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
   },
   {
-    name: 'Building 1 Parking',
-    description: 'A Wide Space for Parking',
+    name: 'Another View of Building 3',
+    description: 'A Wide Shot of the Actual Building 3',
     imageSrc: WarehouseOneImageThree,
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
   },
@@ -41,10 +41,10 @@ export default function ShowcaseWarehouseOne() {
       <div className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-            <h1 className="text-2xl py-5 text-center font-bold text-gray-900">Building 1</h1>
+            <h1 className="text-2xl py-5 text-center font-bold text-gray-900">Building 3</h1>
             <hr />
               <p className="text-base pt-5 text-gray-500">
-                This <span className="text-indigo-500">Building 1</span> is estimated to be a <span className="text-indigo-500">400 sqm facility</span>, thoughtfully designed for practicality and efficiency. Key features include high ceilings, which contribute to a spacious atmosphere and enable enhanced storage capabilities. The building also offers <span className="text-indigo-500">ample parking spaces</span>, accommodating vehicles of various sizes with ease. A standout feature is the <span className="text-indigo-500">24-hour security</span> guard at the main gate, ensuring safety and security for stored goods.
+                <span className="text-indigo-500">Building 3</span>, spanning an <span className="text-indigo-500">estimated 1,600 sqm</span>, showcases vast capacity and versatility. Its large-scale design has been a significant factor for past renters, especially those requiring <span className="text-indigo-500">accommodation for extensive equipment</span> and substantial storage needs. The building features a spacious entrance, further enhancing its suitability for handling <span className="text-indigo-500">large-scale operations</span>.
               </p>
 
 

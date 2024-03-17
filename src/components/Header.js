@@ -11,9 +11,9 @@ import WarehouseImage from '../assets/M_Ignacio_Warehouse_Icon.png';
 import { Link } from 'react-router-dom';
 
 const products = [
-  { name: 'Warehouse 1', description: 'A Vacant Warehouse with 400 sqm', href: '/warehouse-1', icon: TruckIcon },
-  { name: 'Warehouse 2', description: 'A Vacant Warehouse with 800 sqm', href: '#', icon: TruckIcon },
-  { name: 'Warehouse 3', description: 'A Vacant Warehouse with 1600 sqm', href: '#', icon: TruckIcon },
+  { name: 'Building 1', description: 'A Vacant Warehouse with 400 sqm', href: '/warehouse-1', icon: TruckIcon },
+  { name: 'Building 2', description: 'A Vacant Warehouse with 2000 sqm', href: '/warehouse-2', icon: TruckIcon },
+  { name: 'Building 3', description: 'A Vacant Warehouse with 1600 sqm', href: '/warehouse-3', icon: TruckIcon },
   // { name: 'Facility 1', description: 'Connect with third-party tools', href: '#', icon: BuildingOfficeIcon },
   // { name: 'Facility 2', description: 'Build strategic funnels that will convert', href: '#', icon: BuildingOfficeIcon },
 ]
@@ -94,18 +94,21 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-
+          
+          <Link to="/features">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Features
           </a>
+          </Link>
+
           <Link to="/location">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Location
             </a>
           </Link>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Company
-          </a>
+          </a> */}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link to="/contact-us">
@@ -166,18 +169,19 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
+
+                <Link to="/features">
+                  <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    Features
+                  </a>
+                </Link>
+
+                {/* <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Company
-                </a>
+                </a> */}
                 
                 <hr/>
 
