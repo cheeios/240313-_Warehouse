@@ -12,7 +12,7 @@ export default function Home() {
     return (
     <>
       <Helmet>
-        <title>M. Igancio | Home</title>
+        <title>Home</title>
         <meta name="description" content="Come and Check M. Ignacio Warehouse" />
       </Helmet>
 

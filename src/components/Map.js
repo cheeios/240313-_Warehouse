@@ -2,12 +2,20 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
+const destinationAddress = "78 Kaingin Road, Apolonio Samson, Quezon City, 1106 Metro Manila, Philippines"; // Replace with your actual address
+
+const openGoogleDirections = () => {
+  const destination = encodeURIComponent(destinationAddress);
+  const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+  window.open(googleMapsUrl, '_blank');
+};
+
 const subCategories = [
     { name: 'Apple Maps', url: 'https://maps.apple.com/?address=78%20Kaingin%20Road,%20Apolonio%20Samson,%20Quezon%20City,%201106%20Metro%20Manila,%20Philippines&ll=14.648493,121.009708&q=78%20Kaingin%20Road' },
     { name: 'Bing Maps', url: 'https://www.bing.com/maps?osid=296eed10-62f1-4b35-8ca1-a0cb868870b2&cp=14.648676~121.004255&lvl=16&pi=0&imgid=a0eadefe-c251-417f-a996-a1149d2951e1&v=2&sV=2&form=S00027' },
     { name: 'Google Earth', url: 'https://earth.google.com/web/search/M.+Ignacio+Warehouse,+Kaingin+Road,+Balintawak,+Quezon+City,+Metro+Manila/@14.6478767,121.0090707,15.26523397a,814.57589625d,35y,0h,0t,0r/data=CrYBGosBEoQBCiUweDMzOTdiN2NlMzg1NWZlZTU6MHg3OTgwYjA4ZGU2YzVmNGUwGfavUXu2Sy1AIX7aTZWUQF5AKklNLiBJZ25hY2lvIFdhcmVob3VzZSwgS2FpbmdpbiBSb2FkLCBCYWxpbnRhd2FrLCBRdWV6b24gQ2l0eSwgTWV0cm8gTWFuaWxhGAIgASImCiQJc87R6upMLUAROR2pD4JKLUAZcYG-7d1AXkAhmGvNTEtAXkA6AwoBMA' },
     { name: 'Google Maps', url: 'https://maps.app.goo.gl/3krcJjHYGCwAhsE58' },
-];
+  ];
 
 export default function Maps() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -38,8 +46,12 @@ export default function Maps() {
                       <a href={category.url} className="block px-2 py-3 text-left w-full" target="_blank" rel="noopener noreferrer">{category.name}</a>
                     </li>
                   ))}
+                  <li>
+                    <button onClick={openGoogleDirections} className="block px-2 py-3 text-left w-full">Google Directions</button>
+                  </li>
                 </ul>
               </form>
+
             </Dialog.Panel>
           </div>
         </Dialog>
@@ -53,12 +65,15 @@ export default function Maps() {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
             {/* Desktop Filters */}
             <form className="hidden lg:block">
-              <ul className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+              <ul className="px-2 py-3 font-medium text-gray-900">
                 {subCategories.map((category) => (
                   <li key={category.name}>
-                    <a href={category.url} className="block text-left" target="_blank" rel="noopener noreferrer">{category.name}</a>
+                    <a href={category.url} className="block px-2 py-3 text-left w-full" target="_blank" rel="noopener noreferrer">{category.name}</a>
                   </li>
                 ))}
+                <li>
+                  <button onClick={openGoogleDirections} className="block px-2 py-3 text-left w-full">Google Directions</button>
+                </li>
               </ul>
             </form>
 

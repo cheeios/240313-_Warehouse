@@ -6,7 +6,7 @@ export default function Contact() {
     return (
     <>
       <Helmet>
-        <title>M. Igancio | Contact Us</title>
+        <title>Contact Us</title>
         <meta name="description" content="Contact us for any inquiries or questions." />
       </Helmet>
       <Navbar />

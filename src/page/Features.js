@@ -6,7 +6,7 @@ export default function Features() {
     return (
     <>
       <Helmet>
-        <title>M. Igancio | Features</title>
+        <title>Features</title>
         <meta name="description" content="Features of M. Ignacio Warehouse" />
       </Helmet>
       <Navbar />

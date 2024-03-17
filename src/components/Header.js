@@ -70,7 +70,8 @@ export default function Header() {
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
-                    <div
+                    <Link 
+                      to={item.href}
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
@@ -78,18 +79,13 @@ export default function Header() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <Link to={'/' + item.href}>
-                          <a href={item.href} className="block font-semibold text-gray-900">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                        </Link>
+                        <span className="block font-semibold text-gray-900">
+                          {item.name}
+                        </span>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
-                    </div>
+                    </Link>
                   ))}
-                </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                 </div>
               </Popover.Panel>
             </Transition>
@@ -155,15 +151,14 @@ export default function Header() {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...products].map((item) => (
-                          <Disclosure.Button
+                        {products.map((item) => (
+                          <Link 
+                            to={item.href}
                             key={item.name}
-                            as="a"
-                            href={item.href}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
-                          </Disclosure.Button>
+                          </Link>
                         ))}
                       </Disclosure.Panel>
                     </>

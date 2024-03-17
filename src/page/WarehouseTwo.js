@@ -6,8 +6,8 @@ export default function Home() {
     return (
     <>
       <Helmet>
-        <title>M. Igancio | Buidling 3</title>
-        <meta name="description" content="Building 3 Facilities." />
+        <title>Facility | Buidling 2</title>
+        <meta name="description" content="Building 2 Facilities." />
       </Helmet>
 
       <Navbar />

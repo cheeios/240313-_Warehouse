@@ -6,9 +6,10 @@ export default function Location() {
     return (
     <>
       <Helmet>
-        <title>M. Igancio | Location</title>
+        <title>Location</title>
         <meta name="description" content="Locate Us via Google Maps" />
       </Helmet>
+      
       <Navbar />
       <Map />
     </>
