@@ -2,7 +2,6 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  BuildingOfficeIcon,
   TruckIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
@@ -14,8 +13,6 @@ const products = [
   { name: 'Building 1', description: 'A Vacant Warehouse with 400 sqm', href: '/warehouse-1', icon: TruckIcon },
   { name: 'Building 2', description: 'A Vacant Warehouse with 2000 sqm', href: '/warehouse-2', icon: TruckIcon },
   { name: 'Building 3', description: 'A Vacant Warehouse with 1600 sqm', href: '/warehouse-3', icon: TruckIcon },
-  // { name: 'Facility 1', description: 'Connect with third-party tools', href: '#', icon: BuildingOfficeIcon },
-  // { name: 'Facility 2', description: 'Build strategic funnels that will convert', href: '#', icon: BuildingOfficeIcon },
 ]
 
 function classNames(...classes) {
